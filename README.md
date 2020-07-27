@@ -12,8 +12,8 @@ https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/images/日期.png
 
 #### 获取 JSON 数据
 
-例：https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/json/20200312.json
+例：https://cdn.jsdelivr.net/gh/WangNingkai/_AutoFetchBingImage@latest/json/20200312.json
 
 ```
-https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/json/日期.json
+https://cdn.jsdelivr.net/gh/WangNingkai/_AutoFetchBingImage@latest/json/日期.json
 ```
