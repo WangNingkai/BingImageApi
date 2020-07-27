@@ -36,10 +36,10 @@ jobs:
       - name: "Push changes"
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.API_TOKN }}
+          github_token: ${{ secrets.API_TOKEN }}
       - name: "Create a Release"
         uses: elgohr/Github-Release-Action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.API_TOKN }}
+          GITHUB_TOKEN: ${{ secrets.API_TOKEN }}
         with:
           args: BingImage
