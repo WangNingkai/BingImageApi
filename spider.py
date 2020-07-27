@@ -4,11 +4,11 @@ from requests import get
 
 
 def fetchImage():
-    api_url = r'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'
+    api_url = r'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US'
     api = get(api_url)
     json_data = json.loads(api.text)
     pic_url = r'https://s.cn.bing.net{0}'.format(json_data['images'][0]['url'])
-    start_date = json_data['images'][0]['enddate']
+    start_date = json_data['images'][0]['startdate']
     print(start_date)
     open(r'./json/{0}.json'.format(start_date), 'wb').write(api.content)
     print('Create Json Success!')
