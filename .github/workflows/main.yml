@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'json/**'
+      - 'images/**'
   schedule:
     - cron: "0 16 * * *"
 
