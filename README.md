@@ -4,7 +4,7 @@
 
 #### 获取图片
 
-例：https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/images/20200312.png
+例：https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/images/20200726.png
 
 ```
 https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/images/日期.png
@@ -12,7 +12,7 @@ https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/images/日期.png
 
 #### 获取 JSON 数据
 
-例：https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/json/20200312.json
+例：https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/json/20200726.json
 
 ```
 https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/json/日期.json
