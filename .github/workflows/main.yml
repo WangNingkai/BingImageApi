@@ -8,7 +8,7 @@ on:
       - "json/**"
       - "images/**"
   schedule:
-    - cron: "0 16 * * *"
+    - cron: "0 */2 * * *"
 
 env:
   TZ: Asia/Shanghai
