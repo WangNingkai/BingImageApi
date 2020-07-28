@@ -12,7 +12,7 @@ def fetchImage(idx=0):
     images = json_data['images']
     for item in images:
         pic_url = r'https://www.bing.com{0}'.format(item['url'])
-        start_date = item['enddate']
+        start_date = item['startdate']
         open(r'./json/{0}.json'.format(start_date), 'wb').write(api.content)
         pic = get(pic_url, stream=True)
         if (pic.status_code == 200):
