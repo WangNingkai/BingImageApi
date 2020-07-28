@@ -30,7 +30,7 @@ jobs:
       - name: "Working"
         timeout-minutes: 350
         run: bash ./main.sh
-      - name: TimeLog #Api调用
+      - name: "Log"
         run: |
           echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
       - name: Commit files
