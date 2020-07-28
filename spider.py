@@ -1,10 +1,12 @@
 import json
+import sys
 
 from requests import get
 
 
-def fetchImage():
-    api_url = r'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US'
+def fetchImage(idx=0):
+    api_url = r'https://www.bing.com/HPImageArchive.aspx?format=js&idx={0}&n=1&mkt=en-US'.format(
+        idx)
     api = get(api_url)
     json_data = json.loads(api.text)
     images = json_data['images']
@@ -19,7 +21,12 @@ def fetchImage():
             print(r'Create {0} Image Success!'.format(start_date))
         else:
             print(r'Create {0} Image Failed!'.format(start_date))
+    return
 
 
 if __name__ == "__main__":
-    fetchImage()
+    try:
+        idx = sys.argv[1]
+    except IndexError as e:
+        idx = 0
+    fetchImage(idx)

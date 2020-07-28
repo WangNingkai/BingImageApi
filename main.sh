@@ -1,3 +1,3 @@
 #!/bin/bash
 set -eux
-python ./spider.py
+python ./spider.py 0
