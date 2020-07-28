@@ -30,6 +30,9 @@ jobs:
       - name: "Working"
         timeout-minutes: 350
         run: bash ./main.sh
+      - name: TimeLog #Api调用
+        run: | 
+        echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
