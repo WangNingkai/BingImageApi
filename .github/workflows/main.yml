@@ -9,6 +9,8 @@ on:
       - "images/**"
   schedule:
     - cron: "0 */2 * * *"
+  watch:
+    types: [started]
 
 env:
   TZ: Asia/Shanghai
