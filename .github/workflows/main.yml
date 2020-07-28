@@ -29,12 +29,12 @@ jobs:
         run: python -m pip install --upgrade pip
       - name: "Install requirements"
         run: pip install -r ./requirements.txt
+      - name: "Logging"
+        run: |
+          echo `date +"%Y-%m-%d %H:%M:%S"` > time.log
       - name: "Working"
         timeout-minutes: 350
         run: bash ./main.sh
-      - name: "Log"
-        run: |
-          echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
