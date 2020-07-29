@@ -4,7 +4,8 @@ import sys
 import tinify
 from requests import get
 
-secret = ''
+
+
 
 
 def fetchImage(idx=0):
