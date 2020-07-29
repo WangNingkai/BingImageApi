@@ -8,6 +8,7 @@ from requests import get
 
 
 
+secret=r'VBLl6xgyHNCZHzwt2gWJx5T5zjwftqyP'
 def fetchImage(idx=0):
     tinify.key = secret
     api_url = r'https://www.bing.com/HPImageArchive.aspx?format=js&idx={0}&n=1&mkt=en-US'.format(
