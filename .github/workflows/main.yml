@@ -8,7 +8,7 @@ on:
       - "json/**"
       - "images/**"
   schedule:
-    - cron: "0 */2 * * *"
+    - cron: "0 17 * * *"
   watch:
     types: [started]
 
