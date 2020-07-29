@@ -29,12 +29,16 @@ jobs:
         run: python -m pip install --upgrade pip
       - name: "Install requirements"
         run: pip install -r ./requirements.txt
-      - name: "Logging"
+      - name: "Working"
+        env:
+          SECRET: ${{ secrets.SECRET }}
+        timeout-minutes: 350
         run: |
           echo `date +"%Y-%m-%d %H:%M:%S"` > time.log
-      - name: "Working"
-        timeout-minutes: 350
-        run: bash ./main.sh
+          echo $SECRET > key.txt
+          sed -i '10 r key.txt' spider.py
+          python spider.py 0
+          rm -f key.txt
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
