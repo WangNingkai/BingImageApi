@@ -26,7 +26,7 @@ def fetchImage(idx=0):
             source.to_file(r'./images/{0}.png'.format(start_date))
             open(r'./images/{0}.png'.format('latest'), 'wb').write(pic.content)
             source = tinify.from_file(r'./images/{0}.png'.format('latest'))
-            source.to_file(r'./images/{0}.png'.format('latest').format(start_date))
+            source.to_file(r'./images/{0}.png'.format('latest'))
             print(r'Create {0} Image Success!'.format(start_date))
         else:
             print(r'Create {0} Image Failed!'.format(start_date))
