@@ -22,9 +22,11 @@ def fetchImage(idx=0):
         pic = get(pic_url, stream=True)
         if (pic.status_code == 200):
             open(r'./images/{0}.png'.format(start_date),'wb').write(pic.content)
-            open(r'./images/{0}.png'.format('latest'), 'wb').write(pic.content)
             source = tinify.from_file(r'./images/{0}.png'.format(start_date))
             source.to_file(r'./images/{0}.png'.format(start_date))
+            open(r'./images/{0}.png'.format('latest'), 'wb').write(pic.content)
+            source = tinify.from_file(r'./images/{0}.png'.format('latest'))
+            source.to_file(r'./images/{0}.png'.format('latest').format(start_date))
             print(r'Create {0} Image Success!'.format(start_date))
         else:
             print(r'Create {0} Image Failed!'.format(start_date))
