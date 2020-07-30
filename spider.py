@@ -1,15 +1,13 @@
 import json
 import sys
 
+import PIL.Image as Image
 import tinify
 from requests import get
 
+secret = r''
 
 
-
-
-secret=r'VBLl6xgyHNCZHzwt2gWJx5T5zjwftqyP'
-secret=r'VBLl6xgyHNCZHzwt2gWJx5T5zjwftqyP'
 def fetchImage(idx=0):
     tinify.key = secret
     api_url = r'https://www.bing.com/HPImageArchive.aspx?format=js&idx={0}&n=1&mkt=en-US'.format(
@@ -31,6 +29,7 @@ def fetchImage(idx=0):
         else:
             print(r'Create {0} Image Failed!'.format(start_date))
     return
+
 
 
 if __name__ == "__main__":

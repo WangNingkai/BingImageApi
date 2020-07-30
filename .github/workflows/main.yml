@@ -35,10 +35,12 @@ jobs:
         timeout-minutes: 350
         run: |
           echo `date +"%Y-%m-%d %H:%M:%S"` > time.log
+          cp spider.py spider_dev.py
           echo $SECRET > key.txt
-          sed -i '10 r key.txt' spider.py
-          python spider.py 0
+          sed -i '10 r key.txt' spider_dev.py
+          python spider_dev.py 0
           rm -f key.txt
+          rm -f spider_dev.py
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
