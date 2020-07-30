@@ -21,8 +21,8 @@ def fetchImage(idx=0):
         open(r'./json/{0}.json'.format(start_date), 'wb').write(api.content)
         pic = get(pic_url, stream=True)
         if (pic.status_code == 200):
-            open(r'./images/{0}.png'.format(start_date),
-                 'wb').write(pic.content)
+            open(r'./images/{0}.png'.format(start_date),'wb').write(pic.content)
+            open(r'./images/{0}.png'.format('latest'), 'wb').write(pic.content)
             source = tinify.from_file(r'./images/{0}.png'.format(start_date))
             source.to_file(r'./images/{0}.png'.format(start_date))
             print(r'Create {0} Image Success!'.format(start_date))
