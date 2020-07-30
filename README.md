@@ -2,6 +2,14 @@
 
 ### 使用方法
 
+#### 最新图片
+
+例：https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/images/latest.png
+
+```
+https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/images/latest.png
+```
+
 #### 获取图片
 
 例：https://cdn.jsdelivr.net/gh/WangNingkai/BingImageApi@latest/images/20200726.png
