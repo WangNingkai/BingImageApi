@@ -9,7 +9,6 @@ secret = r''
 
 
 def fetchImage(idx=0):
-    tinify.key = secret
     api_url = r'https://www.bing.com/HPImageArchive.aspx?format=js&idx={0}&n=1&mkt=en-US'.format(
         idx)
     api = get(api_url)
@@ -23,8 +22,11 @@ def fetchImage(idx=0):
         if (pic.status_code == 200):
             open(r'./images/{0}.png'.format(start_date),
                  'wb').write(pic.content)
-            source = tinify.from_file(r'./images/{0}.png'.format(start_date))
-            source.to_file(r'./images/{0}.png'.format(start_date))
+            if (secret != ''):
+                tinify.key = secret
+                source = tinify.from_file(
+                    r'./images/{0}.png'.format(start_date))
+                source.to_file(r'./images/{0}.png'.format(start_date))
             shutil.copyfile(r'./images/{0}.png'.format(start_date),
                             r'./images/{0}.png'.format('latest'))
             print(r'Create {0} Image Success!'.format(start_date))
