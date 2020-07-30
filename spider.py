@@ -1,11 +1,11 @@
 import json
 import sys
 
-import PIL.Image as Image
 import tinify
 from requests import get
 
 secret = r''
+
 
 
 def fetchImage(idx=0):
@@ -29,7 +29,6 @@ def fetchImage(idx=0):
         else:
             print(r'Create {0} Image Failed!'.format(start_date))
     return
-
 
 
 if __name__ == "__main__":
