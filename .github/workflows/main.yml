@@ -46,8 +46,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
+<<<<<<< HEAD
           git commit -m "Fetch BingImage at $(date +'%Y-%m-%d %H:%M')" -a
       - name: 'Push changes'
+=======
+          git commit -m ":rocket: Fetch BingImage at $(date +'%Y-%m-%d %H:%M')" -a
+      - name: "Push changes"
+>>>>>>> 819874a99cf0bce5416364ecfb28460a2e537604
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
