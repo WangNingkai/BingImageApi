@@ -37,8 +37,8 @@ jobs:
           echo `date +"%Y-%m-%d %H:%M:%S"` > time.log
           cp spider.py spider_dev.py
           echo $SECRET > key.txt
-          sed -i '10 r key.txt' spider_dev.py
-          python spider_dev.py 0
+          sed -i '8 r key.txt' spider_dev.py
+          python spider_dev.py
           rm -f key.txt
           rm -f spider_dev.py
       - name: Commit files
@@ -47,7 +47,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add -A
           git commit -m ":rocket: Fetch BingImage at $(date +'%Y-%m-%d %H:%M')" -a
-      - name: "Push changes"
+      - name: 'Push changes'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
