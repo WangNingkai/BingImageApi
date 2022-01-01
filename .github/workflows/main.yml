@@ -43,8 +43,8 @@ jobs:
           rm -f spider_dev.py
       - name: Commit files
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "i@ningkai.wang"
+          git config --local user.name "WangNingkai"
           git add -A
           git commit -m ":rocket: Fetch BingImage at $(date +'%Y-%m-%d %H:%M')" -a
       - name: 'Push changes'
