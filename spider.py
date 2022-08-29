@@ -3,6 +3,7 @@ import shutil
 
 import requests as req
 
+
 def main():
     api_url = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US'
     api = req.get(api_url)
@@ -22,5 +23,7 @@ def main():
             print(f'Create {start_date} Image Failed!')
     return
 
+
 if __name__ == "__main__":
     main()
+
