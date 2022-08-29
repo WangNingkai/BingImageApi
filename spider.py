@@ -17,13 +17,10 @@ def main():
             open(f'./images/{start_date}.png', 'wb').write(pic.content)
             shutil.copyfile(f'./images/{start_date}.png',
                             f'./images/latest.png')
-            #with open(f'./images/{start_date}.png', 'rb+') as f:
-            #    uploadImage(f'{start_date}.png', f.read())
             print(f'Create {start_date} Image Success!')
         else:
             print(f'Create {start_date} Image Failed!')
     return
-
 
 if __name__ == "__main__":
     main()
